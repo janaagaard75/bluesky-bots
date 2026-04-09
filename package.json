@@ -37,7 +37,7 @@
     "html-entities": "^2.6.0",
     "image-size": "^2.0.2",
     "jsdom": "^29.0.1",
-    "openai": "^6.33.0",
+    "openai": "^6.34.0",
     "puppeteer": "^24.40.0",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
