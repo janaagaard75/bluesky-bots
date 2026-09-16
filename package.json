@@ -5,12 +5,12 @@
   "author": "Jan Aagaard <jan@aagaard.net>",
   "license": "MIT",
   "type": "module",
-  "packageManager": "yarn@4.15.0",
+  "packageManager": "yarn@4.18.0",
   "scripts": {
     "check-formatting": "prettier --check \"**/*.{css,html,js,json,md,scss,ts,tsx,yml}\"",
     "check-lint": "eslint --format unix --max-warnings 0",
     "check-types": "tsc",
-    "check-unused": "yarn dlx --quiet ts-prune src/",
+    "check-unused": "ts-prune src/",
     "post-new-drdk-links": "tsx ./src/drdk/postNewDrdkLinks.ts",
     "post-new-hn-stories": "tsx ./src/hackerNews/postNewHnStories.ts",
     "post-new-politiet-updates": "tsx ./src/politiet/postNewPolitietUpdates.ts",
@@ -34,31 +34,33 @@
     "update-dependencies": "yarn upgrade-interactive && rm yarn.lock && yarn install"
   },
   "dependencies": {
-    "@atproto/api": "^0.19.9",
+    "@atproto/api": "^0.20.44",
     "@mozilla/readability": "^0.6.0",
     "html-entities": "^2.6.0",
-    "image-size": "^2.0.2",
-    "jsdom": "^29.0.2",
-    "openai": "^6.34.0",
-    "puppeteer": "^24.41.0",
+    "image-size": "^2.0.4",
+    "jsdom": "^30.0.1",
+    "openai": "^7.15.0",
+    "puppeteer": "^25.11.0",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
     "rss-parser": "^3.13.0",
-    "sharp": "^0.34.5"
+    "sharp": "^0.35.4"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
-    "@types/jsdom": "^28.0.1",
-    "@types/node": "^24.12.2",
-    "eslint": "^10.2.1",
+    "@types/jsdom": "^30.0.0",
+    "@types/node": "^24.13.5",
+    "eslint": "^10.10.0",
     "eslint-formatter-unix": "^9.0.1",
-    "eslint-plugin-perfectionist": "^5.9.0",
-    "globals": "^17.5.0",
-    "prettier": "^3.8.3",
-    "tsx": "^4.21.0",
+    "eslint-plugin-perfectionist": "^5.11.1",
+    "globals": "^17.12.0",
+    "prettier": "^3.9.7",
+    "ts-prune": "^0.10.3",
+    "tsx": "^4.23.13",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.58.2",
-    "vitest": "^4.1.4"
+    "typescript-eslint": "^8.70.0",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.1"
   }
 }
