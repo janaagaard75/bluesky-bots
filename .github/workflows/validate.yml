@@ -15,12 +15,12 @@ jobs:
     name: Validate code
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Enable Corepack
         run: corepack enable
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
           cache: "yarn"
@@ -30,6 +30,9 @@ jobs:
 
       - name: Check types
         run: yarn check-types
+
+      - name: Run tests
+        run: yarn test --run
 
       - name: Check lint rules
         run: yarn check-lint
